@@ -6,6 +6,14 @@ let rolesValid = {
     message: '{VALUE}, no is role valid'
 }
 const userShema = new Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    imagen: {
+        type: String,
+        required: false
+    },
     username: {
         type: String,
         require: [true, 'The username is necesary']
@@ -22,7 +30,12 @@ const userShema = new Schema({
     google: {
         type: Boolean,
         default:false
-    }
+    },
+    movies:[{
+        type: Schema.Types.ObjectId,
+        ref: 'Movie',
+        required: false
+    }],
 },{timestamps: true});
 
 userShema.methods.toJSON = function () {
@@ -32,4 +45,4 @@ userShema.methods.toJSON = function () {
     return usuarioObject;
 }
 userShema.plugin( uniqueValidator, {message: '{PATH}  It must be unique'} );
-module.exports = mongoose.model('user', userShema);
+module.exports = mongoose.model('User', userShema);
