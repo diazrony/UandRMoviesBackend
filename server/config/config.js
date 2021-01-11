@@ -18,6 +18,6 @@ process.env.CLIENT_ID = '486105028590-uudenu4qbnencsiec6tb67fpmov3r0jj.apps.goog
 //============================
 // DataBase
 //============================
-let urlDataBase= 'mongodb+srv://diazricardo:diazricardo@cluster0.pppul.mongodb.net/test?authSource=admin&replicaSet=atlas-6bwpx4-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true'
+let urlDataBase= ''
 
 process.env.URLDB = urlDataBase
