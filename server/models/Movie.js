@@ -19,6 +19,14 @@ let movieSchema = new Schema({
         type: String,
         require: [true, 'The categorie is necesary']
     },
+    urlImage: {
+        type: String,
+        require: [true, 'The categorie is necesary']
+    },
+    status: {
+        type:Boolean,
+        default: true
+    },
     qualifications: [
         { type: Schema.Types.ObjectId, ref: 'Qualification',required: false }
     ]
